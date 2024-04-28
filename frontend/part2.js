@@ -19,7 +19,7 @@ cycleBookButton.addEventListener('click', () => {
 document.getElementById("cycleshare").addEventListener("click", async function() {
     try {
         const userId = localStorage.getItem("userId");
-        const response = await fetch(`http://localhost:3000/cycle/getCycleByUser?userId=${userId}`);
+        const response = await fetch(`http://172.31.56.253:3000/cycle/getCycleByUser?userId=${userId}`);
         console.log(response)
         if (response.ok) {
             const cycleData = await response.json();
@@ -70,7 +70,7 @@ document.getElementById("submitCycle").addEventListener("click", async () => {
             mobileNo: document.getElementById("ownerNo").value
         };
 
-        const response = await fetch("http://localhost:3000/cycle/crudCycle", {
+        const response = await fetch("http://172.31.56.253:3000/cycle/crudCycle", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -105,7 +105,7 @@ radioButtons.forEach(radioButton => {
 async function fetchCycles() {
     try {
         const selectedLane = document.querySelector('input[type=radio][name="hostelLane"]:checked').value;
-        const response = await fetch(`http://localhost:3000/cycle/getCyclesByLane?lane=${selectedLane}`);
+        const response = await fetch(`http://172.31.56.253:3000/cycle/getCyclesByLane?lane=${selectedLane}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -162,7 +162,7 @@ document.getElementById("shareExistingCycle").addEventListener("click", async ()
         const cycleId = localStorage.getItem("userId");
         console.log(cycleId)
 
-        const response = await fetch(`http://localhost:3000/cycle/updateAvailability/${cycleId}`, {
+        const response = await fetch(`http://172.31.56.253:3000/cycle/updateAvailability/${cycleId}`, {
             method: "PUT",
             headers: {
                 "Content-type": "application/json"
@@ -189,7 +189,7 @@ document.getElementById("shareExistingCycle1").addEventListener("click", async (
         const cycleId = localStorage.getItem("userId");
         console.log(cycleId)
 
-        const response = await fetch(`http://localhost:3000/cycle/updateAvailability/${cycleId}`, {
+        const response = await fetch(`http://172.31.56.253:3000/cycle/updateAvailability/${cycleId}`, {
             method: "PUT",
             headers: {
                 "Content-type": "application/json"
@@ -212,7 +212,7 @@ document.getElementById("shareExistingCycle1").addEventListener("click", async (
 });
 
 async function updateAccountToCycleOwner(userId) {
-    const apiUrl = `http://localhost:3000/user/${userId}`;
+    const apiUrl = `http://172.31.56.253:3000/user/${userId}`;
 
     const payload = {
         role: 'cycleowner'

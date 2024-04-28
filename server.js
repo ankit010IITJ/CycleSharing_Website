@@ -3,15 +3,19 @@ const app = express();
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const PORT = 3000;
+const LOCAL_IP = '172.31.56.253'; // Replace this with your local IP address
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Allow requests from http://localhost:3000
+  origin: `http://${LOCAL_IP}:${PORT}`
 }));
 
 //middleware func-> post
 app.use(express.json());
 
-app.listen(3000);
+app.listen(PORT, LOCAL_IP, () => {
+  console.log(`Server running at http://${LOCAL_IP}:${PORT}`);
+});
 
 app.use(cookieParser());
 

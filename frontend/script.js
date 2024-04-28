@@ -22,7 +22,7 @@ document.querySelector(".clkbtn").addEventListener("click", async function() {
 
     try {
         // Make a POST request to your server to validate the login credentials
-        const response = await fetch("http://localhost:3000/user/login", {
+        const response = await fetch("http://172.31.56.253:3000/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -67,7 +67,7 @@ forgetbtn.addEventListener("click", async () => {
     const email = emailInput.value;
 
     try {
-        const response = await fetch('http://localhost:3000/user/forgetpassword', {
+        const response = await fetch('http://172.31.56.253:3000/user/forgetpassword', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ signupbtn.addEventListener("click", async () => {
             role: myRole.value
 		};
 		// console.log(obj)
-		const response = await fetch("http://localhost:3000/user/signup", {
+		const response = await fetch("http://172.31.56.253:3000/user/signup", {
 			method: "POST", // Corrected the method to "POST"
 			headers: {
 				"Content-type": "application/json"

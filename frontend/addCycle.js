@@ -16,7 +16,7 @@ addbtn.addEventListener("click", async () => {
             id : userId
         };
 
-        const response = await fetch("http://localhost:3000/cycle/crudCycle", {
+        const response = await fetch("http://172.31.56.253:3000/cycle/crudCycle", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
