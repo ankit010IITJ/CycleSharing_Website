@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="part2.css">
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            
+            <div class="admin-contact">
+                <p class="admin">Admin Address</p>
+            </div>
+
+            <div class="nav-address">
+                <div class="add-icon">
+                    <i style="color: yellow;" class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">G-4 Hostel, G-Lane</p>
+                </div>
+                <p class="add-first">IIT-J Campus, Jodhpur</p>
+            </div>
+
+            <div class="nav-contact">
+                <i style="color: yellow;" class="fa-solid fa-mobile-screen-button"></i>
+                <p class="nav-second">+91 - 9876543210</p>
+            </div>
+
+            <div class="nav-timing">
+                <i style="color: yellow;" class="fa-regular fa-clock"></i>
+                <p class="nav-second">6AM - 10PM</p>
+            </div>
+
+            <div class="nav-timing">
+                <i style="color: yellow;" class="fa-solid fa-user"></i>
+                <p class="nav-second">User Profile</p>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="main_body">
+        <div class="info">
+            <div class="name">
+                <h1 id="infohead">Cycle Rent in IIT-J Campus</h1>
+                <p id="infopara">Now Booking Starts @ ₹ 10/hour
+                </br>Signup Today and get ₹ 200/- In Joyrides wallet
+                </p>
+            </div>
+
+            <div class="function">
+                <button id="cyclebook">Book Riding</button>
+                <button id="cycleshare">Share Cycle</button>
+            </div>
+        </div>
+        
+<!-- Popup Form -->
+<div class="popup" id="popup">
+    <div class="popup-content" id="popupContent">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <!-- Upper part with already shared cycle name and share button -->
+        <div id="sharedCycleSection" style="display: none;">
+            <h2>Share Existing Cycle</h2>
+            <p>Do you want to share this cycle:</p>
+            <p id="sharedCycleName"></p>
+            <button id="shareExistingCycle">Make Available</button>
+            <button id="shareExistingCycle1">Take Back</button>
+        </div>
+        <!-- Line separator -->
+        <hr>
+        <!-- Lower part with form for sharing new cycle -->
+        <div id="newCycleFormSection">
+            <h2>Share New Cycle</h2>
+            <form id="cycleForm">
+                <div class="form-group">
+                    <label for="cycleName">Name:</label>
+                    <input type="text" id="cycleName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cycleColor">Color:</label>
+                    <input type="text" id="cycleColor" required>
+                </div>
+                <div class="form-group">
+                    <label for="hostelLane">Hostel Lane:</label>
+                    <select id="hostelLane">
+                        <option value="Y">Y-lane</option>
+                        <option value="I">I-lane</option>
+                        <option value="B">B-lane</option>
+                        <option value="G">G-lane</option>
+                        <option value="O">O-lane</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ownerNo">Mobile Number:</label>
+                    <input type="tel" id="ownerNo" required>
+                </div>
+                <button type="button" id="submitCycle">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+        <div class="infolite" id="link">
+            <h1 id="infolitehead">BICYCLE, SELF DRIVE RENTAL IIT JODHPUR</h1>
+            <div id="cyclelined">
+                <div id="blank1"></div>
+                <i class="fa-solid fa-bicycle"></i>
+                <div id="blank2"></div>
+            </div>
+            <p id="fleet">View Our Fleet</p>
+        </div>
+        
+        <div id="bookRidingDiv" style="display:none;">
+            <div id="bookRidingDiv2" style="display:flex;">
+            <label>Select Hostel Lane:</label><br>
+            <input type="radio" id="Y" name="hostelLane" value="Y" checked>
+            <label for="Y">Y-lane</label>
+            <input type="radio" id="I" name="hostelLane" value="I">
+            <label for="I">I-lane</label>
+            <input type="radio" id="B" name="hostelLane" value="B">
+            <label for="B">B-lane</label>
+            <input type="radio" id="G" name="hostelLane" value="G">
+            <label for="G">G-lane</label>
+            <input type="radio" id="O" name="hostelLane" value="O">
+            <label for="O">O-lane</label>
+            <button style="display:none;" id="getCycles">Get Cycle</button>
+        </div>
+            <div id="availabilityForm" style="display: none;">
+                <h2>Update Cycle Availability</h2>
+                <button id="submitAvailability">Make Available</button>
+            </div>
+            
+    
+            <div id="availableCycles">
+                <h1 id="heading1">Available Cycles for Rent</h1>
+            </div>
+            <div class="cycle-section">
+                <p id="noCycles" style="display:none;">NO CYCLES AVAILABLE</p>
+                <div id="cycleList"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+    </footer>
+
+    <script src="part2.js"></script>
+
+</body>
+</html>

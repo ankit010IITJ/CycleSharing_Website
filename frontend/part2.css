@@ -1,0 +1,299 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    height: 100px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-item i {
+    color: yellow;
+    margin-right: 5px;
+}
+
+/* Main Body Styles */
+.main_body {
+    width: 100%;
+    padding: 20px;
+}
+
+.info {
+    height: 400px;
+    background-image: url('info.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.function {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.function button {
+    background-color: #FFD000;
+    height: 40px;
+    width: 160px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.function button:hover {
+    border: 2px solid orange;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure the popup is on top of other content */
+    overflow: auto; /* Enable scrolling if content exceeds viewport */
+}
+
+.popup-content {
+    background-color: #fefefe; /* White background */
+    margin: 10% auto; /* Center the popup vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 600px; /* Limit the width of the popup */
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-btn {
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+/* Info Lite Section Styles */
+.infolite {
+    background-color: #f3f3f3;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#infolitehead {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#cyclelined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#cyclelined div {
+    width: 50px;
+    height: 3px;
+    background-color: #333;
+}
+
+#cyclelined i {
+    color: #333;
+    font-size: 2rem;
+    margin: 0 20px;
+}
+
+#fleet {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Book Riding Section Styles */
+#bookRidingDiv {
+    display: none;
+    padding: 20px;
+}
+
+#bookRidingDiv2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#bookRidingDiv2 label {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+#bookRidingDiv2 input[type="radio"] {
+    margin-right: 5px;
+}
+
+#availabilityForm {
+    margin-bottom: 20px;
+}
+
+#availabilityForm h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#submitAvailability {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitAvailability:hover {
+    background-color: #0056b3;
+}
+
+#availableCycles {
+    text-align: center;
+}
+
+#heading1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cycle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#noCycles {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles (if needed) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.infolite h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cycle-section {
+    margin-top: 20px;
+}
+
+/* Cycle Card Styles */
+.cycle-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.cycle-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.cycle-card p {
+    margin: 5px 0;
+}
+
+.cycle-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.request-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.request-button:hover {
+    background-color: #0056b3;
+}
